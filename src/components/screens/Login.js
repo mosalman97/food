@@ -9,7 +9,7 @@ import {
 import React from 'react';
 
 // constants
-import {Fonts} from '../constants/Constants';
+import {Fonts, SIZE} from '../constants/Constants';
 
 // packages
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
@@ -41,8 +41,19 @@ const Login = () => {
               placeholder="Password"
               placeholderTextColor={'#B6B7B7'}
             />
-            <TouchableOpacity style={styles.signInButton}>
+            <TouchableOpacity style={styles.signInButton} activeOpacity={0.8}>
               <Text style={styles.buttonText}>sign in</Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.bottomView}>
+            <TouchableOpacity activeOpacity={0.8} style={styles.forgotButton}>
+              <Text style={styles.forgotText}>Forgot your password?</Text>
+            </TouchableOpacity>
+            <TouchableOpacity activeOpacity={0.8}>
+              <Text style={styles.accountText}>
+                Don't have an Account?
+                <Text style={styles.highlightText}> Sign Up</Text>
+              </Text>
             </TouchableOpacity>
           </View>
         </KeyboardAwareScrollView>
@@ -65,17 +76,18 @@ const styles = StyleSheet.create({
     color: '#4A4B4D',
     textTransform: 'capitalize',
     textAlign: 'right',
-    paddingRight: 33,
-    paddingTop: 26,
+    paddingRight: SIZE(33),
+    paddingTop: SIZE(26),
   },
   scrollStyle: {
     flex: 1,
     justifyContent: 'center',
     borderWidth: 1,
-    paddingHorizontal: 34,
+    paddingHorizontal: SIZE(34),
   },
   topView: {
     alignItems: 'center',
+    marginBottom: SIZE(25),
   },
   signText: {
     fontSize: 30,
@@ -90,17 +102,19 @@ const styles = StyleSheet.create({
     color: '#7C7D7E',
     textTransform: 'capitalize',
   },
-  middleView: {},
+  middleView: {
+    marginBottom: SIZE(20),
+  },
   input: {
     width: '100%',
     backgroundColor: '#F2F2F2',
     fontFamily: Fonts.light,
     borderRadius: 28,
     color: '#000000',
-    paddingLeft: 34,
-    paddingTop: 17,
-    paddingBottom: 16,
-    marginBottom: 20,
+    paddingLeft: SIZE(34),
+    paddingTop: SIZE(17),
+    paddingBottom: SIZE(16),
+    marginBottom: SIZE(20),
   },
   signInButton: {
     alignItems: 'center',
@@ -108,13 +122,34 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#3BB0EC',
     borderRadius: 28,
-    paddingTop: 17,
-    paddingBottom: 16,
+    paddingTop: SIZE(17),
+    paddingBottom: SIZE(16),
   },
   buttonText: {
     fontSize: 14,
     fontFamily: Fonts.semiBold,
     color: '#FFFFFF',
     textTransform: 'capitalize',
+  },
+  bottomView: {
+    alignItems: 'center',
+  },
+  forgotButton: {
+    marginBottom: SIZE(15),
+  },
+  forgotText: {
+    fontSize: 14,
+    fontFamily: Fonts.semiBold,
+    color: '#444444',
+  },
+  accountText: {
+    fontSize: 14,
+    fontFamily: Fonts.regular,
+    color: '#7C7D7E',
+  },
+  highlightText: {
+    fontSize: 14,
+    fontFamily: Fonts.bold,
+    color: '#5DA7A3',
   },
 });

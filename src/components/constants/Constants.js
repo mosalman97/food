@@ -25,3 +25,8 @@ export const Fonts = {
   bold: 'segoe-ui-bold',
   shuriken: 'ShurikenStd',
 };
+
+// commansize
+export const SIZE = value => {
+  return wp(value / 4.2);
+};
