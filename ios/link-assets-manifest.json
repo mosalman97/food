@@ -1,0 +1,25 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/ShurikenStd.ttf",
+      "sha1": "6a3b41a2dbb498b84642c799c8cc76cc608e16a5"
+    },
+    {
+      "path": "src/assets/fonts/segoe-ui-bold.ttf",
+      "sha1": "d07f82c5312df2fdc67e983f13e17ad63f799701"
+    },
+    {
+      "path": "src/assets/fonts/segoe-ui.ttf",
+      "sha1": "7fece2909ccb0172bbbc3435b5597fb53cf97c0c"
+    },
+    {
+      "path": "src/assets/fonts/segoeuil.ttf",
+      "sha1": "c37ee99c790339e79ccad0ab1cc347a76f115cd6"
+    },
+    {
+      "path": "src/assets/fonts/seguisb.ttf",
+      "sha1": "3459d8ed203c35a9f6a97f55e1f2dfe5ed6e8d61"
+    }
+  ]
+}
