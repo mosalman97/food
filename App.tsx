@@ -1,15 +1,11 @@
 import {StyleSheet, View} from 'react-native';
-import React from 'react';
-import SplashScreen from './src/components/screens/SplashScreen';
-import Login from './src/components/screens/Login';
+import React, {useEffect, useState} from 'react';
+
+// navigation
+import Navigation from './src/components/navigations/Navigation';
 
 const App = () => {
-  return (
-    <View>
-      {/* <SplashScreen /> */}
-      <Login />
-    </View>
-  );
+  return <Navigation />;
 };
 
 export default App;

@@ -24,7 +24,6 @@ const Login = () => {
         </TouchableOpacity>
         <KeyboardAwareScrollView
           contentContainerStyle={styles.scrollStyle}
-          extraScrollHeight={20}
           keyboardShouldPersistTaps="handled">
           <View style={styles.topView}>
             <Text style={styles.signText}>sign in</Text>
@@ -82,7 +81,6 @@ const styles = StyleSheet.create({
   scrollStyle: {
     flex: 1,
     justifyContent: 'center',
-    borderWidth: 1,
     paddingHorizontal: SIZE(34),
   },
   topView: {
@@ -94,7 +92,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.bold,
     color: '#000000',
     textTransform: 'capitalize',
-    marginBottom: 15,
+    marginBottom: SIZE(15),
   },
   detailText: {
     fontSize: 14,
@@ -110,7 +108,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#F2F2F2',
     fontFamily: Fonts.light,
     borderRadius: 28,
-    color: '#000000',
+    color: 'black',
     paddingLeft: SIZE(34),
     paddingTop: SIZE(17),
     paddingBottom: SIZE(16),
