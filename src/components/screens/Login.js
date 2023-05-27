@@ -6,15 +6,43 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 // constants
 import {Fonts, SIZE} from '../constants/Constants';
 
 // packages
 import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
+import axios from 'axios';
+import {useToast} from 'react-native-toast-notifications';
 
-const Login = () => {
+const Login = ({navigation}) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const toast = useToast(); // toast
+
+  const handleLogin = () => {
+    if (email && password) {
+      const data = {
+        email: 'shak@gmail.com',
+        password: 12345,
+        lang_id: 'en',
+        device_token: 'sss',
+      };
+      axios
+        .post('http://proteinium.iroidtechnologies.in/api/v1/login', data)
+        .then(response => {
+          navigation.navigate('Tab');
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    } else {
+      toast.show('Enter email & password!', {
+        type: 'normal',
+      });
+    }
+  };
   return (
     <>
       <StatusBar backgroundColor={'#fff'} barStyle={'dark-content'} />
@@ -34,13 +62,21 @@ const Login = () => {
               style={styles.input}
               placeholder="User Name"
               placeholderTextColor={'#B6B7B7'}
+              value={email}
+              onChangeText={text => setEmail(text)}
             />
             <TextInput
               style={styles.input}
               placeholder="Password"
               placeholderTextColor={'#B6B7B7'}
+              value={password}
+              onChangeText={text => setPassword(text)}
+              secureTextEntry
             />
-            <TouchableOpacity style={styles.signInButton} activeOpacity={0.8}>
+            <TouchableOpacity
+              style={styles.signInButton}
+              activeOpacity={0.8}
+              onPress={handleLogin}>
               <Text style={styles.buttonText}>sign in</Text>
             </TouchableOpacity>
           </View>

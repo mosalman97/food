@@ -1,13 +1,22 @@
-import {StyleSheet, View} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 // navigation
 import Navigation from './src/components/navigations/Navigation';
 
+// packages
+import {ToastProvider} from 'react-native-toast-notifications';
+
 const App = () => {
-  return <Navigation />;
+  return (
+    <ToastProvider
+      duration={800}
+      placement="bottom"
+      successColor="#56a641"
+      dangerColor="#FF4545"
+      warningColor="#FFC745">
+      <Navigation />
+    </ToastProvider>
+  );
 };
 
 export default App;
-
-const styles = StyleSheet.create({});

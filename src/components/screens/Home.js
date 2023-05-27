@@ -13,7 +13,7 @@ import HeaderIcon from '../../assets/icons/notif.svg';
 import ArrowIcon from '../../assets/icons/darkarrow.svg';
 
 // constants
-import {deviceHeight, Fonts, SIZE} from '../constants/Constants';
+import {Fonts, SIZE} from '../constants/Constants';
 
 const Home = () => {
   const statusBarHeight = StatusBar.currentHeight;
@@ -36,7 +36,6 @@ const Home = () => {
       image: require('../../assets/images/foodthree.png'),
     },
   ];
-
   return (
     <>
       <StatusBar translucent backgroundColor="transparent" />
@@ -99,11 +98,10 @@ const styles = StyleSheet.create({
   header: {
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'flex-end',
+    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#3BB0EC',
-    paddingBottom: SIZE(18),
-    paddingHorizontal: SIZE(20),
+    paddingBottom: SIZE(19),
   },
   headerText: {
     fontSize: 34,
@@ -113,7 +111,8 @@ const styles = StyleSheet.create({
   headerIcon: {
     width: SIZE(24),
     height: SIZE(24),
-    marginLeft: SIZE(88),
+    position: 'absolute',
+    right: SIZE(20),
   },
   container: {
     paddingHorizontal: SIZE(20),
@@ -147,7 +146,7 @@ const styles = StyleSheet.create({
   imageView: {
     width: '100%',
     height: SIZE(145),
-    marginBottom: SIZE(38),
+    marginBottom: SIZE(35),
   },
   transparentView: {
     position: 'absolute',
