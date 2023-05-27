@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   View,
+  ActivityIndicator,
 } from 'react-native';
 import React, {useState} from 'react';
 
@@ -19,9 +20,11 @@ import {useToast} from 'react-native-toast-notifications';
 const Login = ({navigation}) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [buttonLoading, setButtonLoading] = useState(false);
   const toast = useToast(); // toast
 
   const handleLogin = () => {
+    setButtonLoading(true);
     if (email && password) {
       const data = {
         email: 'shak@gmail.com',
@@ -32,12 +35,15 @@ const Login = ({navigation}) => {
       axios
         .post('http://proteinium.iroidtechnologies.in/api/v1/login', data)
         .then(response => {
+          setButtonLoading(false);
           navigation.navigate('Tab');
         })
         .catch(error => {
+          setButtonLoading(false);
           console.log(error);
         });
     } else {
+      setButtonLoading(false);
       toast.show('Enter email & password!', {
         type: 'normal',
       });
@@ -77,7 +83,11 @@ const Login = ({navigation}) => {
               style={styles.signInButton}
               activeOpacity={0.8}
               onPress={handleLogin}>
-              <Text style={styles.buttonText}>sign in</Text>
+              {buttonLoading ? (
+                <ActivityIndicator size={'small'} color={'white'} />
+              ) : (
+                <Text style={styles.buttonText}>sign in</Text>
+              )}
             </TouchableOpacity>
           </View>
           <View style={styles.bottomView}>

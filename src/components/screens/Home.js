@@ -146,7 +146,12 @@ const styles = StyleSheet.create({
   imageView: {
     width: '100%',
     height: SIZE(145),
-    marginBottom: SIZE(35),
+    marginBottom: SIZE(37),
+    shadowColor: '#000000',
+    shadowOffset: {width: 0, height: 3},
+    shadowOpacity: 0.5,
+    shadowRadius: 8,
+    backgroundColor: 'transparent',
   },
   transparentView: {
     position: 'absolute',
@@ -157,14 +162,16 @@ const styles = StyleSheet.create({
     borderBottomRightRadius: 13,
     backgroundColor: '#929292',
     opacity: 0.81,
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    paddingHorizontal: SIZE(20),
+    alignItems: 'center',
   },
   imageText: {
     fontSize: SIZE(14),
     fontFamily: Fonts.bold,
     textTransform: 'capitalize',
     color: '#FFFFFF',
-    paddingLeft: SIZE(20),
   },
   roundView: {
     width: SIZE(40),
@@ -175,7 +182,7 @@ const styles = StyleSheet.create({
     borderRadius: 100,
     elevation: 3,
     position: 'absolute',
-    bottom: SIZE(-18),
+    bottom: SIZE(-16),
     right: SIZE(20),
   },
   arrowStyle: {
