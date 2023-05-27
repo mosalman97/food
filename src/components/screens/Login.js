@@ -116,7 +116,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   skipText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.bold,
     color: '#4A4B4D',
     textTransform: 'capitalize',
@@ -134,14 +134,14 @@ const styles = StyleSheet.create({
     marginBottom: SIZE(25),
   },
   signText: {
-    fontSize: 30,
+    fontSize: SIZE(30),
     fontFamily: Fonts.bold,
     color: '#000000',
     textTransform: 'capitalize',
     marginBottom: SIZE(15),
   },
   detailText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.regular,
     color: '#7C7D7E',
     textTransform: 'capitalize',
@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
     width: '100%',
     backgroundColor: '#F2F2F2',
     fontFamily: Fonts.light,
+    fontSize: SIZE(12),
     borderRadius: 28,
     color: 'black',
     paddingLeft: SIZE(34),
@@ -170,7 +171,7 @@ const styles = StyleSheet.create({
     paddingBottom: SIZE(16),
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.semiBold,
     color: '#FFFFFF',
     textTransform: 'capitalize',
@@ -182,17 +183,17 @@ const styles = StyleSheet.create({
     marginBottom: SIZE(15),
   },
   forgotText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.semiBold,
     color: '#444444',
   },
   accountText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.regular,
     color: '#7C7D7E',
   },
   highlightText: {
-    fontSize: 14,
+    fontSize: SIZE(14),
     fontFamily: Fonts.bold,
     color: '#5DA7A3',
   },

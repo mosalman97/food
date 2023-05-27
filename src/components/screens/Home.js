@@ -97,14 +97,14 @@ export default Home;
 const styles = StyleSheet.create({
   header: {
     width: '100%',
-    flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
+    flexDirection: 'row',
     backgroundColor: '#3BB0EC',
-    paddingBottom: SIZE(19),
+    paddingBottom: SIZE(20),
   },
   headerText: {
-    fontSize: 34,
+    fontSize: SIZE(34),
     fontFamily: Fonts.shuriken,
     color: '#FFFFFF',
   },

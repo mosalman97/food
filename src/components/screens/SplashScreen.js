@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, ImageBackground, StatusBar} from 'react-native';
 import React from 'react';
 
 // constants
-import {Fonts} from '../constants/Constants';
+import {Fonts, SIZE} from '../constants/Constants';
 
 const SplashScreen = () => {
   return (
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textStyle: {
-    fontSize: 34,
+    fontSize: SIZE(34),
     fontFamily: Fonts.shuriken,
     color: '#000000',
   },
