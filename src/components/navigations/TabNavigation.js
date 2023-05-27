@@ -26,7 +26,7 @@ const TabNavigation = () => {
         headerShown: false,
         tabBarStyle: {
           backgroundColor: '#F6F6F6',
-          height: SIZE(60),
+          height: SIZE(65),
           elevation: 0,
           borderTopWidth: 0,
         },
