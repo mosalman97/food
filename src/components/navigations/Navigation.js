@@ -1,4 +1,3 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React, {useState, useEffect} from 'react';
 
 // screens
@@ -22,7 +21,7 @@ const Navigation = () => {
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{headerShown: false}}
-        initialRouteName="Tab">
+        initialRouteName="Login">
         {isActive ? (
           <Stack.Screen name="Splash" component={SplashScreen} />
         ) : (
@@ -37,5 +36,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-
-const styles = StyleSheet.create({});
